@@ -1,0 +1,41 @@
+# Local-only research artifacts — do not commit.
+docs/apk/
+docs/decompiled/
+docs/captures/
+
+# Release signing — never commit keystore credentials
+keystore.properties
+*.jks
+*.keystore
+
+# Android / Gradle
+*.apk
+*.aab
+*.dex
+*.ap_
+*.iml
+.gradle/
+local.properties
+build/
+captures/
+.cxx/
+release/
+
+# Android Studio / IntelliJ
+.idea/
+*.ipr
+*.iws
+out/
+
+# Kotlin
+.kotlin/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs / scratch
+*.log
+*.tmp
+*.swp
+*~
