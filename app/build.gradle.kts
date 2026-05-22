@@ -7,7 +7,7 @@ plugins {
 
 // Release signing credentials are read from (in order):
 //   1. keystore.properties at the repo root (gitignored, for local releases)
-//   2. env vars GENMON_KEYSTORE_FILE / _PASSWORD / _KEY_ALIAS / _KEY_PASSWORD (for CI)
+//   2. env vars HGENMON_KEYSTORE_FILE / _PASSWORD / _KEY_ALIAS / _KEY_PASSWORD (for CI)
 // If neither is present, assembleRelease still produces an unsigned APK (not installable).
 val keystorePropsFile = rootProject.file("keystore.properties")
 val keystoreProps = Properties().apply {
@@ -16,20 +16,20 @@ val keystoreProps = Properties().apply {
 fun signingValue(key: String, env: String): String? =
     keystoreProps.getProperty(key) ?: System.getenv(env)
 
-val releaseKeystore = signingValue("storeFile", "GENMON_KEYSTORE_FILE")
-val releaseStorePassword = signingValue("storePassword", "GENMON_KEYSTORE_PASSWORD")
-val releaseKeyAlias = signingValue("keyAlias", "GENMON_KEY_ALIAS")
-val releaseKeyPassword = signingValue("keyPassword", "GENMON_KEY_PASSWORD")
+val releaseKeystore = signingValue("storeFile", "HGENMON_KEYSTORE_FILE")
+val releaseStorePassword = signingValue("storePassword", "HGENMON_KEYSTORE_PASSWORD")
+val releaseKeyAlias = signingValue("keyAlias", "HGENMON_KEY_ALIAS")
+val releaseKeyPassword = signingValue("keyPassword", "HGENMON_KEY_PASSWORD")
 val releaseSigningReady =
     releaseKeystore != null && releaseStorePassword != null &&
     releaseKeyAlias != null && releaseKeyPassword != null
 
 android {
-    namespace = "io.github.genmon"
+    namespace = "io.github.hgenmon"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "io.github.genmon"
+        applicationId = "io.github.hgenmon"
         minSdk = 33
         targetSdk = 36
         versionCode = 1

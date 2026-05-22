@@ -1,4 +1,4 @@
-package io.github.genmon
+package io.github.hgenmon
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -12,7 +12,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
-import io.github.genmon.ui.MainActivity
+import io.github.hgenmon.ui.MainActivity
 import java.text.DateFormat
 import java.util.Date
 
@@ -25,10 +25,10 @@ import java.util.Date
  */
 object Notifications {
 
-    const val CHAN_STATUS = "genmon.status"
-    const val CHAN_ALARM = "genmon.alarm"
-    const val CHAN_SUCCESS = "genmon.success"
-    const val CHAN_CONNECTIVITY = "genmon.connectivity"
+    const val CHAN_STATUS = "hgenmon.status"
+    const val CHAN_ALARM = "hgenmon.alarm"
+    const val CHAN_SUCCESS = "hgenmon.success"
+    const val CHAN_CONNECTIVITY = "hgenmon.connectivity"
 
     const val ID_STATUS = 1
     const val ID_ALARM = 2

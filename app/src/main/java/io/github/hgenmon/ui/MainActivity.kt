@@ -1,4 +1,4 @@
-package io.github.genmon.ui
+package io.github.hgenmon.ui
 
 import android.Manifest
 import android.content.Context
@@ -66,13 +66,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import io.github.genmon.AppLog
-import io.github.genmon.Notifications
-import io.github.genmon.ble.GenClient
-import io.github.genmon.ble.GenScanner
-import io.github.genmon.data.GenStore
-import io.github.genmon.data.PairedGen
-import io.github.genmon.protocol.Z44Profile
+import io.github.hgenmon.AppLog
+import io.github.hgenmon.Notifications
+import io.github.hgenmon.ble.GenClient
+import io.github.hgenmon.ble.GenScanner
+import io.github.hgenmon.data.GenStore
+import io.github.hgenmon.data.PairedGen
+import io.github.hgenmon.protocol.Z44Profile
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.launchIn
@@ -462,7 +462,7 @@ private fun MainScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("GenMon", fontWeight = FontWeight.SemiBold, fontSize = 22.sp) },
+                title = { Text("HGenMon", fontWeight = FontWeight.SemiBold, fontSize = 22.sp) },
                 actions = {
                     IconButton(onClick = onOpenSettings) {
                         Icon(SettingsIcon, contentDescription = "Settings")

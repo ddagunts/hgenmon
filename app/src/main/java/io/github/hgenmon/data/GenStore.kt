@@ -1,4 +1,4 @@
-package io.github.genmon.data
+package io.github.hgenmon.data
 
 import android.content.Context
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -53,7 +53,7 @@ class GenStore(context: Context) {
     }
 
     private companion object {
-        const val PREFS_NAME = "genmon"
+        const val PREFS_NAME = "hgenmon"
         const val KEY_PAIRED = "paired"
         const val KEY_AUTO_CONNECT = "auto_connect"
     }

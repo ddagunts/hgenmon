@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "genmon"
+rootProject.name = "hgenmon"
 include(":app")

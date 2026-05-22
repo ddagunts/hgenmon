@@ -1,4 +1,4 @@
-package io.github.genmon.data
+package io.github.hgenmon.data
 
 import org.json.JSONObject
 

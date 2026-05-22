@@ -1,4 +1,4 @@
-package io.github.genmon.protocol
+package io.github.hgenmon.protocol
 
 /**
  *

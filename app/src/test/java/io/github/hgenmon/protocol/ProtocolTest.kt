@@ -1,4 +1,4 @@
-package io.github.genmon.protocol
+package io.github.hgenmon.protocol
 
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals

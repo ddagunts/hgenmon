@@ -1,4 +1,4 @@
-package io.github.genmon.ui
+package io.github.hgenmon.ui
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

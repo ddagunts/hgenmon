@@ -1,4 +1,4 @@
-# genmon
+# hgenmon
 
 An open-source Android app for monitoring Bluetooth-equipped inverter generators (EU2200i, EU3000iS, EU7000iS, and similar) over BLE. Independent project — not affiliated with, endorsed by, or supported by any generator manufacturer.
 
@@ -21,9 +21,9 @@ If you are not comfortable accepting all liability for how you use this software
 
 ## Install
 
-[<img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" height="56">](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https%3A%2F%2Fgithub.com%2Fddagunts%2Fgenmon)
+[<img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" height="56">](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https%3A%2F%2Fgithub.com%2Fddagunts%2Fhgenmon)
 
-Or grab the latest signed APK directly from the [Releases page](https://github.com/ddagunts/genmon/releases/latest) and sideload it.
+Or grab the latest signed APK directly from the [Releases page](https://github.com/ddagunts/hgenmon/releases/latest) and sideload it.
 
 ---
 
@@ -76,7 +76,7 @@ Open: WRITE_1 (eco toggle) byte format; WARNING/FAULT bitfield → human-readabl
 
 ### Persistent notification
 
-While connected, GenMon posts an ongoing notification on a **low-importance** channel (no sound/vibrate) summarising the live state:
+While connected, HGenMon posts an ongoing notification on a **low-importance** channel (no sound/vibrate) summarising the live state:
 
 > **1,290 W**
 > Updated just now (18:16:25) · Stopping in 4:17
@@ -92,7 +92,7 @@ When the timer reaches zero:
 - On success → a **quiet** "Engine stopped" notification; the app stops auto-reconnect attempts (the gen is now off and so is its BT module).
 - On failure (no acknowledgement after 7 attempts, or the BLE link died first) → a **high-priority alarm** notification — the engine is still running and needs manual intervention.
 
-> ⚠️ **Auto-stop timers run inside the app process.** If you close GenMon, kill it from recents, or the OS reclaims it for memory, the timer is lost and the engine will keep running. Keep the app open until the timer fires. There is no background service or AlarmManager wakeup yet.
+> ⚠️ **Auto-stop timers run inside the app process.** If you close HGenMon, kill it from recents, or the OS reclaims it for memory, the timer is lost and the engine will keep running. Keep the app open until the timer fires. There is no background service or AlarmManager wakeup yet.
 
 ### Immediate stop
 
@@ -102,8 +102,8 @@ The red **Stop engine** button sends the stop command right away (same 7 retries
 
 Three independent paths surface generator alarms:
 
-1. **WARNING / FAULT poll** — every ~30 s GenMon reads the WARNING (group C) and FAULT (group D) bitfields. If either goes non-zero, a high-priority **Generator alarm** notification fires with the raw hex value. (Low oil is one of the bits in this set — bit→label decoding is still TBD, so today the notification just tells you to go check the generator.)
-2. **EWI indication** — GenMon subscribes to the `ERROR_AND_WARNING_INFORMATION` characteristic if the BT module exposes it. Any payload pushed by the generator triggers the same alarm notification.
+1. **WARNING / FAULT poll** — every ~30 s HGenMon reads the WARNING (group C) and FAULT (group D) bitfields. If either goes non-zero, a high-priority **Generator alarm** notification fires with the raw hex value. (Low oil is one of the bits in this set — bit→label decoding is still TBD, so today the notification just tells you to go check the generator.)
+2. **EWI indication** — HGenMon subscribes to the `ERROR_AND_WARNING_INFORMATION` characteristic if the BT module exposes it. Any payload pushed by the generator triggers the same alarm notification.
 3. **Connectivity loss** — if an established connection drops while you still want it (i.e. you didn't tap Disconnect, and the stop wasn't initiated by an auto-stop timer), a high-priority **Connection lost** notification fires. If a timed stop was pending, you also get a stop-failure alarm — the command was never delivered.
 
 Alarms use the system's default sound and full-screen heads-up presentation. The "Generator alarm" body shows raw bitfield/EWI bytes so the value can be cross-referenced against future protocol-decoding work.
@@ -112,7 +112,7 @@ Alarms use the system's default sound and full-screen heads-up presentation. The
 
 - **Auto-connect** — on by default. With it on, opening the app or returning to it after a disconnect will scan and reconnect automatically. Turn it off if you want manual control over connections.
 - **Paired generators** — tap a row to rename, tap **Forget** to remove. Renaming only affects the display label; the serial number and MAC are preserved.
-- **Logs** — live tail of the in-app event log, mirrored to Android Log under tag `genmon`. Useful when troubleshooting via `adb logcat`.
+- **Logs** — live tail of the in-app event log, mirrored to Android Log under tag `hgenmon`. Useful when troubleshooting via `adb logcat`.
 
 ## Building
 

@@ -1,4 +1,4 @@
-package io.github.genmon.ble
+package io.github.hgenmon.ble
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
@@ -8,8 +8,8 @@ import android.bluetooth.le.ScanResult
 import android.bluetooth.le.ScanSettings
 import android.content.Context
 import android.os.ParcelUuid
-import io.github.genmon.AppLog
-import io.github.genmon.protocol.BleSpec
+import io.github.hgenmon.AppLog
+import io.github.hgenmon.protocol.BleSpec
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow

@@ -1,4 +1,4 @@
-package io.github.genmon
+package io.github.hgenmon
 
 import android.util.Log
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.asSharedFlow
  * the UI subscribes to. Replay buffer lets a new collector see the recent history.
  */
 object AppLog {
-    private const val TAG = "genmon"
+    private const val TAG = "hgenmon"
 
     private val _flow = MutableSharedFlow<String>(replay = 200, extraBufferCapacity = 200)
     val flow: SharedFlow<String> = _flow.asSharedFlow()
