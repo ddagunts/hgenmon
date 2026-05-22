@@ -1,4 +1,4 @@
-package io.github.hgenmon.ble
+package com.ddagunts.hgenmon.ble
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
@@ -9,10 +9,10 @@ import android.bluetooth.BluetoothGattDescriptor
 import android.bluetooth.BluetoothProfile
 import android.bluetooth.BluetoothStatusCodes
 import android.content.Context
-import io.github.hgenmon.AppLog
-import io.github.hgenmon.protocol.BleSpec
-import io.github.hgenmon.protocol.Frame
-import io.github.hgenmon.protocol.Z44Profile
+import com.ddagunts.hgenmon.AppLog
+import com.ddagunts.hgenmon.protocol.BleSpec
+import com.ddagunts.hgenmon.protocol.Frame
+import com.ddagunts.hgenmon.protocol.Z44Profile
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

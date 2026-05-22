@@ -1,4 +1,4 @@
-package io.github.hgenmon
+package com.ddagunts.hgenmon
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -12,7 +12,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
-import io.github.hgenmon.ui.MainActivity
+import com.ddagunts.hgenmon.ui.MainActivity
 import java.text.DateFormat
 import java.util.Date
 

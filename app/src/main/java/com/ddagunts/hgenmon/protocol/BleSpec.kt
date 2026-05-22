@@ -1,4 +1,4 @@
-package io.github.hgenmon.protocol
+package com.ddagunts.hgenmon.protocol
 
 import java.util.UUID
 

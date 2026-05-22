@@ -25,11 +25,11 @@ val releaseSigningReady =
     releaseKeyAlias != null && releaseKeyPassword != null
 
 android {
-    namespace = "io.github.hgenmon"
+    namespace = "com.ddagunts.hgenmon"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "io.github.hgenmon"
+        applicationId = "com.ddagunts.hgenmon"
         minSdk = 33
         targetSdk = 36
         versionCode = 1

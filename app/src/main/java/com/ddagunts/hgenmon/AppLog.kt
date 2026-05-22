@@ -1,4 +1,4 @@
-package io.github.hgenmon
+package com.ddagunts.hgenmon
 
 import android.util.Log
 import kotlinx.coroutines.flow.MutableSharedFlow

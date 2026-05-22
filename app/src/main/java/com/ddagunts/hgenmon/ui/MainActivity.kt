@@ -1,4 +1,4 @@
-package io.github.hgenmon.ui
+package com.ddagunts.hgenmon.ui
 
 import android.Manifest
 import android.content.Context
@@ -66,13 +66,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import io.github.hgenmon.AppLog
-import io.github.hgenmon.Notifications
-import io.github.hgenmon.ble.GenClient
-import io.github.hgenmon.ble.GenScanner
-import io.github.hgenmon.data.GenStore
-import io.github.hgenmon.data.PairedGen
-import io.github.hgenmon.protocol.Z44Profile
+import com.ddagunts.hgenmon.AppLog
+import com.ddagunts.hgenmon.Notifications
+import com.ddagunts.hgenmon.ble.GenClient
+import com.ddagunts.hgenmon.ble.GenScanner
+import com.ddagunts.hgenmon.data.GenStore
+import com.ddagunts.hgenmon.data.PairedGen
+import com.ddagunts.hgenmon.protocol.Z44Profile
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.launchIn

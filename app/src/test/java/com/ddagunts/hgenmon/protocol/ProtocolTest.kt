@@ -1,4 +1,4 @@
-package io.github.hgenmon.protocol
+package com.ddagunts.hgenmon.protocol
 
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals
