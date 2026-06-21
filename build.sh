@@ -4,7 +4,7 @@ set -euo pipefail
 # Build script for release APK. The JDK path is the JBR bundled with a
 # specific Android Studio install; override via JAVA_HOME= in the env if
 # you use a different location.
-JAVA_HOME="${JAVA_HOME:-/home/dima/Downloads/android-studio-panda4-patch1-linux/android-studio/jbr}"
+JAVA_HOME="${JAVA_HOME:-/home/dima/Downloads/android-studio-quail1-patch2-linux/android-studio/jbr}"
 
 if [[ ! -x "$JAVA_HOME/bin/java" ]]; then
     echo "ERROR: JAVA_HOME=$JAVA_HOME does not contain bin/java" >&2
